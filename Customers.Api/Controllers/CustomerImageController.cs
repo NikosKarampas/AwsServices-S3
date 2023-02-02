@@ -1,4 +1,5 @@
-﻿using Amazon.S3;
+﻿using Amazon.DynamoDBv2.Model.Internal.MarshallTransformations;
+using Amazon.S3;
 using Customers.Api.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -43,7 +44,13 @@ namespace Customers.Api.Controllers
         [HttpDelete("customers/{id:guid}/image")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
-            throw new NotImplementedException();
+            var response = await _customerImageService.DeleteImageAsync(id);
+            return response.HttpStatusCode switch
+            {
+                HttpStatusCode.NoContent => Ok(),
+                HttpStatusCode.NotFound => NotFound(),
+                _ => BadRequest()
+            };
         }
     }
 }

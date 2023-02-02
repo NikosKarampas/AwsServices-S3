@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "8KhcpsDoD2XBEnZuInrtdH9KvB+cG5MyIpRVzK4tMkOMkbJ3EOsH+D4PSPupf49BVxi/zw/t9TEy+yoNRd23KA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\NikosKarampas\\Aws Services\\S3\\S3Playground\\S3Playground.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NikosKarampas\\.nuget\\packages\\awssdk.core\\3.7.103.26\\awssdk.core.3.7.103.26.nupkg.sha512",
+    "C:\\Users\\NikosKarampas\\.nuget\\packages\\awssdk.s3\\3.7.102.2\\awssdk.s3.3.7.102.2.nupkg.sha512"
+  ],
+  "logs": []
+}
